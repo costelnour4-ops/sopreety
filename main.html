@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SO PRETTY | Luxury Beauty Sibiu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent: #c4a47c; /* Auriu șampanie */
+            --bg-dark: #121212; /* Negru intens */
+            --card-bg: #1e1e1e; /* Gri foarte închis */
+            --text-main: #e0e0e0;
+            --text-muted: #a0a0a0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Fundal cu textură subtilă */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% 50%, #1e1e1e 0%, #121212 100%);
+            z-index: -1;
+        }
+
+        /* Header */
+        header {
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(196, 164, 124, 0.2);
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            color: var(--accent);
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            margin-bottom: 15px;
+        }
+
+        .hero-content p {
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.9rem;
+        }
+
+        /* Despre Noi */
+        .about {
+            padding: 80px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--accent);
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        .about p {
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        /* Contact & Program Grid */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 0 20px 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 40px;
+            border: 1px solid rgba(196, 164, 124, 0.1);
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--accent);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+        }
+
+        .card p, .card li {
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .card ul { list-style: none; }
+
+        .btn-call {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 35px;
+            background: var(--accent);
+            color: black;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        .btn-call:hover {
+            background: #e0c29d;
+            box-shadow: 0 0 20px rgba(196, 164, 124, 0.4);
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            .logo { font-size: 1.8rem; }
+            .hero { height: 40vh; }
+            .about { padding: 50px 20px; }
+            .grid-container { grid-template-columns: 1fr; }
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #0a0a0a;
+            font-size: 0.8rem;
+            color: #555;
+            border-top: 1px solid rgba(196, 164, 124, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">So Pretty</div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Signature Beauty</h1>
+            <p>Arta frumuseții în Sibiu</p>
+        </div>
+    </section>
+
+    <section class="about">
+        <h2>Despre So Pretty</h2>
+        <p>
+            Situat pe Calea Dumbrăvii, salonul <strong>So Pretty</strong> este mai mult decât un spațiu de estetică; este o destinație a rafinamentului. Ne dedicăm timpul pentru a oferi servicii impecabile, folosind produse de top și tehnici de ultimă oră pentru a evidenția frumusețea naturală a fiecărei cliente.
+        </p>
+    </section>
+
+    <div class="grid-container">
+        <div class="card">
+            <h3>Locație</h3>
+            <p>Calea Dumbrăvii 37</p>
+            <p>Sibiu, România</p>
+            <p style="margin-top: 10px; font-style: italic; color: var(--text-muted);">Peste drum de Parcul Sub Arini</p>
+        </div>
+
+        <div class="card">
+            <h3>Program Salon</h3>
+            <ul>
+                <li>Luni — Vineri: <span style="float: right;">08:00 - 20:00</span></li>
+                <li>Sâmbătă: <span style="float: right;">08:00 - 16:00</span></li>
+                <li style="color: var(--accent); margin-top: 10px;">Duminică: <span style="float: right;">Închis</span></li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Rezervări</h3>
+            <p>Telefon: 0745 178 264</p>
+            <p>Email: salon@sopretty.ro</p>
+            <a href="tel:0745178264" class="btn-call">Sună Acum</a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 SO PRETTY SIBIU | DESIGN EXCLUSIV
+    </footer>
+
+</body>
+</html>
